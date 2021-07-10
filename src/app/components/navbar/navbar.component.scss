@@ -1,0 +1,117 @@
+/*==============Import global variables from general style file==================*/
+@import "../../../colors.scss";
+
+/*==============Navbar==================*/
+
+.header {
+    position: fixed;
+    inset: 0;
+    bottom: unset;
+    z-index: 111;
+    transition: all 0.5s;
+}
+
+.navbar-brand {
+    color: $colorWhite;
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+
+
+    #head{
+        font-size: 2rem;
+    }
+
+    #subHead{
+        font-size: 1.3rem;
+    }
+
+
+}
+
+#navbarSupportedContent ul li {
+    padding-right: 1.5rem;
+    a {
+        color: $colorWhite;
+        transition: all 0.3s ease-in-out;
+        padding: .5rem 0;
+        position: relative;
+
+        &::after{
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 0%;
+            height: 2px;
+            background: $colorAccent;
+            transition: all 0.3s ease-in-out;
+        }
+
+
+        &:hover {
+            color: $colorAccent;
+
+            &::after{
+                width: 100%;
+            }
+        }
+
+
+
+    }
+
+    .active-link {
+        color: $colorAccent;
+        position: relative;
+        padding: .5rem 0;
+
+        &::after{
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: $colorAccent;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .navbar {
+        padding: 0.5rem 1rem;
+    }
+
+    #navbarSupportedContent {
+        ul {
+            margin: 15px 0;
+            background: $colorWhite;
+            border-radius: 5px;
+
+            li {
+                margin: 10px;
+
+                a{
+                    width: fit-content;
+                    color: $primaryBackground;
+                }
+            }
+        }
+    }
+
+    
+
+}
+
+@media screen and (max-width: 768px) {
+    .container{
+        max-width: 90%;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .navbar {
+        padding: 0 1rem;
+    }
+}
