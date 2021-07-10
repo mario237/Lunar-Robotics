@@ -15,7 +15,7 @@ export class HomeComponent implements OnInit {
   ngAfterViewInit() {
     AOS.init({
       duration: 1500,
-      once: true
+      once: false
   });
   }
 
