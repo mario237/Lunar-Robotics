@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-declare let $:any;
+declare let $: any;
 import * as AOS from 'aos';
 
 
@@ -12,24 +12,23 @@ export class HomeComponent implements OnInit {
 
   constructor() { }
 
-  ngAfterViewInit() {
-    AOS.init({
-      duration: 1500,
-      once: false
-  });
-  }
+
 
   ngOnInit(): void {
     this.changeHeaderBackground();
+    AOS.init({
+      duration: 1500,
+      once: true
+    });
   }
 
-  playPerviewVideo(event:any){
+  playPerviewVideo(event: any) {
     event.preventDefault();
     $('#video-overlay').addClass('open');
     $("#video-overlay").append('<iframe width="75%" height="75%" src="https://www.youtube.com/embed/gUVb9g7R9Xk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
   }
 
-   close_video(event:any) {
+  close_video(event: any) {
     event.preventDefault();
     $('.video-overlay.open').removeClass('open').find('iframe').remove();
   };

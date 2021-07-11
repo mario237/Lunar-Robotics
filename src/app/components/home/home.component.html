@@ -1,54 +1,101 @@
 <section class="hero-section">
     <div class="bg-overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="hero-data col-lg-6 pt-4 pt-lg-0" data-aos="fade-right">
+                <span>ARTIFICIAL INTELLIGENCE AND ROBOTICS</span>
+                <h1>Lunar Robotics Challenge</h1>
+                <p>Many space exploration plans proposed by different parties include the Moon as main objective as
+                    well as a stepping stone towards Mars. The Moon offers several advantages as base for planetary
+                    exploration.</p>
+                <a href="#">Discover More</a>
 
-    <div class="hero-caption">
+            </div>
+
+            <div class="col-lg-6 d-flex justify-content-center" data-aos="fade-left">
+                <img src="../../../assets/images/hero-img.png" alt="">
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<div class="home-rest d-flex flex-column align-items-center">
+    <section class="why-us-section ">
+        <div class="container d-flex flex-column align-items-center">
+            <div class="why-us-caption row align-items-center">
+
+                <div class="col-md-6" data-aos="fade-right">
+                    <h2>Why you choose Lunar Robotics ?</h2>
+                </div>
+
+                <div class="col-md-6" data-aos="fade-left">
+                    <p> One of the advantages is the availability of raw materials for building and running a base. One
+                        of
+                        the materials that would be tremendously advantageous is water.
+                    </p>
+                </div>
+            </div>
+
+            <div class="why-us-preview row my-5" data-aos="fade-up">
+                <img class="rounded" src="assets/images/lap-img.jpg" alt="">
+                <a (click)="playPerviewVideo($event)" href="#" class="play-btn"></a>
+
+                <div id="video-overlay" class="video-overlay">
+                    <a (click)="close_video($event)" class="video-overlay-close">&times;</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <section class="our-value-section">
         <div class="container">
             <div class="row">
-                <div class="hero-data col-lg-6" data-aos="fade-right">
-                    <span>ARTIFICIAL INTELLIGENCE AND ROBOTICS</span>
-                    <h1>Lunar Robotics Challenge</h1>
-                    <p>Many space exploration plans proposed by different parties include the Moon as main objective as
-                        well as a stepping stone towards Mars. The Moon offers several advantages as base for planetary
-                        exploration.</p>
-                    <a href="">Discover More</a>
-                </div>
-
-                <div class="hero-img col-md-6" data-aos="fade-left">
-                    <img class="w-100" src="assets/images/hero-img.png" alt="">
+                <div class="section-header text-center">
+                    <h6 data-aos="fade-right">OUR VALUE</h6>
+                    <h2 data-aos="fade-left">The power of applied intelligence.</h2>
                 </div>
             </div>
         </div>
-    </div>
-</section>
 
+        <div class="container">
+            <div class="value-cards row">
+                <div class="value-card col-md-3" data-aos="fade-right">
 
-<section class="why-us-section ">
-    <div class="container d-flex flex-column align-items-center">
-        <div class="why-us-caption row align-items-center">
-            
-            <div class="col-md-5" data-aos="fade-right">
-                <h2>Why you choose Lunar Robotics ?</h2>
-            </div>
+                    <div class="value-card-icon"><i class="far fa-lightbulb"></i></div>
 
-            <div class="offset-lg-1 col-md-6" data-aos="fade-left">
-                <p> One of the advantages is the availability of raw materials for building and running a base. One
-                    of
-                    the materials that would be tremendously advantageous is water.
-                </p>
+                    <h3>Vission</h3>
+
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+
+                </div>
+
+                <div class="value-card offset-md-1 col-md-3" data-aos="fade-down">
+
+                    <div class="value-card-icon"><i class="fas fa-rocket"></i></div>
+
+                    <h3>Mission</h3>
+
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+
+                </div>
+
+                <div class="value-card offset-md-1 col-md-3" data-aos="fade-left">
+
+                    <div class="value-card-icon"><i class="fas fa-layer-group"></i></div>
+
+                    <h3>Motto</h3>
+
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+
+                </div>
             </div>
         </div>
-
-        <div class="why-us-preview row my-5" data-aos="fade-up">
-            <img class="rounded" src="assets/images/lap-img.jpg" alt="">
-            <a (click)="playPerviewVideo($event)" href="#" class="play-btn"></a>
-
-            <div id="video-overlay" class="video-overlay">
-                <a (click)="close_video($event)" class="video-overlay-close">&times;</a>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-
-
+    </section>
+</div>
