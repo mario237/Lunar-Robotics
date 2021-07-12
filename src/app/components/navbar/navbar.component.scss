@@ -11,6 +11,8 @@
     transition: all 0.5s;
 }
 
+
+
 .navbar-brand {
     color: $colorWhite;
     display: flex;
@@ -108,7 +110,7 @@
 
 @media screen and (max-width: 768px) {
     .container{
-        max-width: 90%;
+        max-width: 100%;
     }
 }
 

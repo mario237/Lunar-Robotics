@@ -43,10 +43,10 @@
 
             <div class="why-us-preview row my-5" data-aos="fade-up">
                 <img class="rounded" src="assets/images/lap-img.jpg" alt="">
-                <a (click)="playPerviewVideo($event)" href="#" class="play-btn"></a>
+                <a (click)="_VideoHelperService.playPerviewVideo($event , 'https://www.youtube.com/embed/gUVb9g7R9Xk')" href="#" class="play-btn"></a>
 
                 <div id="video-overlay" class="video-overlay">
-                    <a (click)="close_video($event)" class="video-overlay-close">&times;</a>
+                    <a (click)="_VideoHelperService.close_video($event)" class="video-overlay-close">&times;</a>
                 </div>
 
             </div>

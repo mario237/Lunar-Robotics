@@ -1,0 +1,401 @@
+@import "../../../colors.scss";
+
+.services-section {
+    position: absolute;
+    top: 25%;
+    left: 0;
+    width: 100%;
+
+    .services-caption {
+        position: relative;
+        padding-left: 30px;
+        color: $colorWhite;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 30px;
+            left: 0;
+            width: 2px;
+            height: 100%;
+            background-color: $colorAccent;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 18px;
+            left: -4px;
+            width: 12px;
+            height: 12px;
+            border-radius: 6px;
+            background-color: $colorAccent;
+        }
+
+        h1 {
+            font-family: "MuseoModerno", cursive;
+            font-size: 72px;
+            font-weight: 300;
+        }
+
+        p {
+            font-weight: 300;
+            max-width: 550px;
+            color: $lightGray;
+        }
+    }
+
+    .services-preview {
+        position: relative;
+        margin: 5rem auto;
+
+        img {
+            width: 100%;
+            height: 100%;
+            max-height: 550px;
+            object-fit: cover;
+            filter: grayscale(100%);
+            transition-duration: 1s;
+            border-radius: 10px;
+        }
+
+        &:hover {
+            img {
+                filter: none;
+            }
+        }
+
+        .play-btn {
+            width: 70px;
+            height: 70px;
+            background: radial-gradient(rgba(255, 255, 255, 0.8) 60%, rgba(255, 255, 255, 1) 62%);
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: block;
+            box-shadow: 0px 0px 25px 3px rgba(91, 199, 231, 1);
+        }
+
+        /* triangle */
+        .play-btn::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translateX(-40%) translateY(-50%);
+            transform-origin: center center;
+            width: 0;
+            height: 0;
+            border-top: 9px solid transparent;
+            border-bottom: 9px solid transparent;
+            border-left: 15px solid #000;
+            z-index: 100;
+            transition: all 400ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+        }
+
+        /* pulse wave */
+        .play-btn:before {
+            content: "";
+            position: absolute;
+            width: 150%;
+            height: 150%;
+            animation-delay: 0s;
+            animation: pulsate1 2s;
+            animation-direction: forwards;
+            animation-iteration-count: infinite;
+            animation-timing-function: steps;
+            opacity: 1;
+            border-radius: 50%;
+            border: 5px solid rgba(255, 255, 255, 0.75);
+            top: -25%;
+            left: -25%;
+            background: rgba(198, 16, 0, 0);
+        }
+
+        .video-overlay {
+            position: fixed;
+            z-index: -1;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.8);
+            opacity: 0;
+            transition: all ease 500ms;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .video-overlay.open {
+            position: fixed;
+            z-index: 1000;
+            opacity: 1;
+        }
+
+        .video-overlay-close {
+            position: absolute;
+            z-index: 1000;
+            top: 15px;
+            right: 20px;
+            font-size: 36px;
+            line-height: 1;
+            font-weight: 400;
+            color: #fff;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 200ms;
+        }
+
+        .video-overlay-close:hover {
+            color: $colorAccent;
+        }
+
+        .video-overlay iframe {
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.75);
+        }
+    }
+
+    .our-offer {
+        font-family: "Saira", sans-serif;
+        margin: 3rem auto;
+        color: $colorWhite;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .offer-header {
+            h6 {
+                color: $colorAccent;
+                font-weight: 100;
+            }
+
+            h2 {
+                font-family: "MuseoModerno", cursive;
+                margin: 20px 0;
+                font-size: 48px;
+                font-weight: 300;
+            }
+        }
+
+        .offer-cards {
+            margin: 25px 0;
+            display: flex;
+            flex-wrap: wrap;
+            height: 100%;
+
+            .offer-card {
+                text-align: center;
+                padding: 15px;
+                margin: 15px 0;
+                border-radius: 10px;
+                transition: all 0.7s;
+                background: #080a0c;
+
+                &-icon {
+                    transition: all 0.7s;
+                    font-size: 40px;
+                }
+
+                h3 {
+                    margin: 15px 0;
+                    font-size: 25px;
+                    font-weight: 400;
+                }
+
+                p {
+                    font-weight: 100;
+                }
+            }
+        }
+    }
+
+    .why-choose-us {
+        height: 100%;
+        margin: 7rem auto;
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .choose-us-caption {
+            height: fit-content;
+            padding: 2rem 3rem;
+            background: #000000d1;
+            border: 1px solid $colorAccent;
+            border-radius: 10px;
+            color: $colorWhite;
+
+            span {
+                color: $colorAccent;
+                font-family: "Saira", sans-serif;
+                font-weight: 100;
+            }
+
+            h2 {
+                margin: 25px 0;
+                font-size: 48px;
+                font-weight: 300;
+            }
+
+            p {
+                color: $lightGray;
+                font-weight: 100;
+            }
+
+            .qualifications-cards {
+                font-family: "Saira", sans-serif;
+                display: flex;
+                flex-wrap: wrap;
+                margin: 35px auto 0;
+
+                .qualifications-card {
+                    padding: 15px 10px;
+                    margin: 10px;
+                    border-radius: 10px;
+                    transition: all 0.7s;
+                    background: #080a0c;
+
+                    h3 {
+                        font-size: 23px;
+                        color: $colorAccent;
+                    }
+
+                    p {
+                        width: 100%;
+                        color: $colorWhite;
+                        font-weight: 100;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 993px) {
+    .services-section {
+        .our-offer {
+            .offer-cards {
+                .offer-card {
+                    &:hover {
+                        border: 1px solid $colorAccent;
+                        transform: translateY(-15px);
+
+                        .offer-card-icon {
+                            color: $colorAccent;
+                        }
+                    }
+                }
+            }
+        }
+
+        .why-choose-us {
+            .choose-us-caption {
+                position: absolute;
+                top: 15% unset 0 0;
+                width: 110%;
+                z-index: 1;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .services-section {
+        .services-preview.container {
+            max-width: 80%;
+        }
+    }
+}
+
+@media screen and (max-width: 769px) {
+    .services-section {
+        .our-offer {
+            .offer-cards {
+                .offer-card {
+                    h3 {
+                        font-size: 21px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 426px) {
+    .services-section {
+        .services-caption {
+            h1 {
+                font-size: 60px;
+            }
+        }
+
+        .services-preview {
+            .play-btn {
+                width: 50px;
+                height: 50px;
+            }
+        }
+
+        .our-offer {
+            .offer-header {
+                padding: 0 10px;
+                h2 {
+                    font-size: 30px;
+                }
+            }
+        }
+
+        .why-choose-us {
+            &.container {
+                max-width: 100%;
+            }
+            .choose-us-caption {
+                padding: 1rem;
+                text-align: center;
+
+                h2 {
+                    text-align: left;
+                    font-size: 35px;
+                }
+
+                p {
+                    text-align: left;
+                }
+
+                .qualifications-cards {
+                    .qualifications-card {
+                        h3 {
+                            text-align: left;
+                            font-size: 17px;
+                        }
+
+                        p {
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*KeyFrame Animations*/
+
+@keyframes pulsate1 {
+    0% {
+        transform: scale(0.6);
+        opacity: 1;
+        box-shadow: inset 0px 0px 25px 3px rgba(255, 255, 255, 0.75), 0px 0px 25px 10px rgba(255, 255, 255, 0.75);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+        box-shadow: none;
+    }
+}

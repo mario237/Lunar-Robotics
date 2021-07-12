@@ -1,5 +1,6 @@
+import { NavbarServiceService } from './../../sevices/navbar-service.service';
 import { Component, OnInit } from '@angular/core';
-declare let $:any;
+import { AnimationsService } from 'src/app/services/animations.service';
 
 @Component({
   selector: 'app-pricing',
@@ -8,21 +9,13 @@ declare let $:any;
 })
 export class PricingComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _NavbarServiceService: NavbarServiceService, private _AnimationsService: AnimationsService) { }
 
   ngOnInit(): void {
-    this.changeHeaderBackground();
+    this._NavbarServiceService.changeHeaderBackground();
+    this._AnimationsService.initalizeAnimation();
   }
 
-  changeHeaderBackground() {
 
-    $(window).on('scroll', () => {
-      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        $('.header').css('background', '#000')
-      } else {
-        $('.header').css('background', 'transparent')
-      }
-    })
-  }
 
 }
