@@ -79,14 +79,16 @@
 }
 
 
-
 @media screen and (max-width: 992px) {
     .navbar {
         padding: 0.5rem 1rem;
     }
 
     #navbarSupportedContent {
+        position: relative;
+
         ul {
+            height: fit-content;
             margin: 15px 0;
             background: $colorWhite;
             border-radius: 5px;
@@ -101,9 +103,7 @@
             }
         }
     }
-
     
-
 }
 
 @media screen and (max-width: 768px) {

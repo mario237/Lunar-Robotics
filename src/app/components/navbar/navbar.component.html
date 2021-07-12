@@ -9,41 +9,42 @@
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fas fa-bars text-light"></i>
             </button>
-    
+
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
-    
-                    <li class="nav-item">
-                        <a class="nav-link" (click)="closeNavbar()" routerLink="/home"
-                            routerLinkActive="active-link">Home</a>
-                    </li>
-    
-                
-                    <li class="nav-item">
-                        <a class="nav-link" (click)="closeNavbar()" routerLink="/services"
-                            routerLinkActive="active-link">Services</a>
-                    </li>
-    
-                    <li class="nav-item">
-                        <a class="nav-link" (click)="closeNavbar()" routerLink="/projects"
-                            routerLinkActive="active-link">Projects</a>
-                    </li>
-    
 
                     <li class="nav-item">
-                        <a class="nav-link" (click)="closeNavbar()" routerLink="/pricing"
+                        <a class="nav-link" (click)="this._NavbarServiceService.collapseNav()" routerLink="/home" routerLinkActive="active-link">Home</a>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" (click)="this._NavbarServiceService.collapseNav()" routerLink="/services"
+                            routerLinkActive="active-link">Services</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" (click)="this._NavbarServiceService.collapseNav()" routerLink="/projects"
+                            routerLinkActive="active-link">Projects</a>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" (click)="this._NavbarServiceService.collapseNav()" routerLink="/pricing"
                             routerLinkActive="active-link">Pricing</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" (click)="closeNavbar()" routerLink="/contact"
+                        <a class="nav-link" (click)="this._NavbarServiceService.collapseNav()" routerLink="/contact"
                             routerLinkActive="active-link">Contact US</a>
                     </li>
-    
-    
+
+
                 </ul>
+
+
             </div>
         </div>
-    
+
     </nav>
 </header>

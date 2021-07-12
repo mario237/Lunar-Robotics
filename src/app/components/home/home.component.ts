@@ -34,7 +34,6 @@ export class HomeComponent implements OnInit {
   };
 
   changeHeaderBackground() {
-
     $(window).on('scroll', () => {
       if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
         $('.header').css('background', '#000')

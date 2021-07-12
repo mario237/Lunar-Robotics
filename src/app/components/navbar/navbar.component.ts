@@ -1,3 +1,4 @@
+import { NavbarServiceService } from './../../sevices/navbar-service.service';
 import { Component, OnInit } from '@angular/core';
 declare let $:any;
 
@@ -8,13 +9,11 @@ declare let $:any;
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  constructor(public _NavbarServiceService:NavbarServiceService) { }
 
   ngOnInit(): void {
   }
 
-  closeNavbar(){
-    $(".navbar-collapse").collapse('hide');
-  }
+
 
 }
