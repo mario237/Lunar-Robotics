@@ -7,9 +7,14 @@
     width: 100%;
 
     .price-table-wrapper {
-        text-align: center;
-        margin-top: 30px;
         font-family: "Saira", sans-serif;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 85%;
+        margin: 30px auto;
+        text-align: center;
+
 
 
         .featured-table {
@@ -21,6 +26,7 @@
             border: 1px solid $colorAccent;
             border-radius: 10px;
             background: black;
+            width: 30%;
             margin: 20px;
             transition: all 0.3s ease-in-out;
 
@@ -113,6 +119,42 @@
     }
 
     .business-card{
-        transform: scale(1.1);
+        transform: scale(1);
+    }
+}
+
+@media screen and (min-width:992px){
+    .pricing-section{
+        .price-table-wrapper{
+            .pricing-table{
+                width: 25%;
+            }
+        }
+        .business-card{
+            transform: scale(1.1);
+        }
+    }
+}
+
+@media screen and (max-width:769px){
+    .pricing-section{
+        .price-table-wrapper{
+            width: 60%;
+            .pricing-table{
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width:769px){
+    .pricing-section{
+        .price-table-wrapper{
+            width: 90%;
+            .pricing-table{
+                width: 100%;
+            }
+        }
     }
 }

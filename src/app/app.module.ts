@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { ServicesComponent } from './components/services/services.component';
-import { ProjectsComponent } from './components/projects/projects.component';
 import { PricingComponent } from './components/pricing/pricing.component';
 import { ContactComponent } from './components/contact/contact.component';
 
@@ -16,7 +15,6 @@ import { ContactComponent } from './components/contact/contact.component';
     NavbarComponent,
     HomeComponent,
     ServicesComponent,
-    ProjectsComponent,
     PricingComponent,
     ContactComponent,
   ],
