@@ -1,7 +1,7 @@
 <header class="header">
     <nav class="navbar navbar-expand-lg overflow-hidden">
         <div class="container py-3">
-            <a class="navbar-brand" routerLink="/home">
+            <a class="navbar-brand">
                 <span id="head">Lunar</span>
                 <span id="subHead">Robotics</span>
             </a>
@@ -14,7 +14,8 @@
                 <ul class="navbar-nav ml-auto">
 
                     <li class="nav-item">
-                        <a class="nav-link" (click)="this._NavbarServiceService.collapseNav()" routerLink="/home" routerLinkActive="active-link">Home</a>
+                        <a (click)="this._NavbarServiceService.collapseNav()" class="nav-link" routerLink="/home"
+                           routerLinkActive="active-link">Home</a>
                     </li>
 
 
@@ -23,7 +24,7 @@
                             routerLinkActive="active-link">Services</a>
                     </li>
 
-                  
+
 
                     <li class="nav-item">
                         <a class="nav-link" (click)="this._NavbarServiceService.collapseNav()" routerLink="/pricing"

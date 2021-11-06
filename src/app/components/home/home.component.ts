@@ -1,6 +1,6 @@
 import { AnimationsService } from '../../services/animations.service';
 import { VideoHelperService } from '../../services/video-helper.service';
-import { NavbarServiceService } from '../../sevices/navbar-service.service';
+import { NavbarServiceService } from '../../services/navbar-service.service';
 import { Component, OnInit } from '@angular/core';
 
 

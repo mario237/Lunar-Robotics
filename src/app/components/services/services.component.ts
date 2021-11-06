@@ -1,4 +1,4 @@
-import { NavbarServiceService } from '../../sevices/navbar-service.service';
+import { NavbarServiceService } from '../../services/navbar-service.service';
 import { Component, OnInit } from '@angular/core';
 import { VideoHelperService } from 'src/app/services/video-helper.service';
 import { AnimationsService } from 'src/app/services/animations.service';

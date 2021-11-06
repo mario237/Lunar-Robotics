@@ -1,4 +1,4 @@
-import { NavbarServiceService } from './../../sevices/navbar-service.service';
+import { NavbarServiceService } from '../../services/navbar-service.service';
 import { Component, OnInit } from '@angular/core';
 declare let $:any;
 

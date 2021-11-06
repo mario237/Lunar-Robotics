@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AnimationsService } from 'src/app/services/animations.service';
-import { NavbarServiceService } from 'src/app/sevices/navbar-service.service';
+import { NavbarServiceService } from 'src/app/services/navbar-service.service';
 
 @Component({
   selector: 'app-contact',
