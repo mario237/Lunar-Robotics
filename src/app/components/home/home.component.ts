@@ -1,6 +1,6 @@
-import { AnimationsService } from './../../services/animations.service';
-import { VideoHelperService } from './../../services/video-helper.service';
-import { NavbarServiceService } from './../../sevices/navbar-service.service';
+import { AnimationsService } from '../../services/animations.service';
+import { VideoHelperService } from '../../services/video-helper.service';
+import { NavbarServiceService } from '../../sevices/navbar-service.service';
 import { Component, OnInit } from '@angular/core';
 
 
@@ -11,17 +11,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private _NavbarServiceService:NavbarServiceService , public _VideoHelperService:VideoHelperService , private _AnimationsService:AnimationsService) { }
+  isLoading:boolean = true;
 
+  constructor
+  (
+    private _NavbarServiceService: NavbarServiceService,
+    public _VideoHelperService: VideoHelperService,
+    private _AnimationsService: AnimationsService
+  ) {}
 
 
   ngOnInit(): void {
     this._NavbarServiceService.changeHeaderBackground();
     this._AnimationsService.initalizeAnimation();
+
+    setTimeout(() => {
+      this.isLoading = false;
+    }, 1500);
   }
 
-
-
- 
 
 }

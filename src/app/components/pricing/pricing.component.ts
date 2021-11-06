@@ -1,4 +1,4 @@
-import { NavbarServiceService } from './../../sevices/navbar-service.service';
+import { NavbarServiceService } from '../../sevices/navbar-service.service';
 import { Component, OnInit } from '@angular/core';
 import { AnimationsService } from 'src/app/services/animations.service';
 
@@ -9,11 +9,17 @@ import { AnimationsService } from 'src/app/services/animations.service';
 })
 export class PricingComponent implements OnInit {
 
+  isLoading:boolean = true;
+
   constructor(private _NavbarServiceService: NavbarServiceService, private _AnimationsService: AnimationsService) { }
 
   ngOnInit(): void {
     this._NavbarServiceService.changeHeaderBackground();
     this._AnimationsService.initalizeAnimation();
+
+    setTimeout(() => {
+      this.isLoading = false;
+    }, 1500);
   }
 
 
